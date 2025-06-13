@@ -2,10 +2,11 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ListeCv } from "../liste-cv/liste-cv";
 import { DetailCv } from "../detail-cv/detail-cv";
 import { personne } from "../../Model/personne";
+import { NgIf } from '@angular/common';
 @Component({
   selector: 'app-cv',
   standalone: true, 
-  imports: [ListeCv, DetailCv],
+  imports: [ListeCv, DetailCv,NgIf],
   templateUrl: './cv.html',
   styleUrl: './cv.css'
 })

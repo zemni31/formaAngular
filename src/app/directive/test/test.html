@@ -2,5 +2,18 @@
 <p>test Directive works!</p>
 </div>
 <div >
-<input type="text" class="form-control" appRainbow >
+<input *ngIf="show"
+type="text" 
+class="form-control" 
+appRainbow >
+<br>
+<button class="btn btn-primary" (click)="show = !show">
+    show rainbow input
+</button>
+
 </div>
+<br>
+<ol class="list-group">
+    <li *ngFor="let person of persons,let ind=index" class="list-group-item">
+   {{person}}      -{{ind}}-
+</ol>
