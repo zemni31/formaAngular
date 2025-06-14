@@ -3,6 +3,7 @@ import { ListeCv } from "../liste-cv/liste-cv";
 import { DetailCv } from "../detail-cv/detail-cv";
 import { personne } from "../../Model/personne";
 import { NgIf } from '@angular/common';
+import { Premier } from '../../premier';
 @Component({
   selector: 'app-cv',
   standalone: true, 
@@ -11,7 +12,7 @@ import { NgIf } from '@angular/common';
   styleUrl: './cv.css'
 })
 export class Cv implements OnInit {
-  
+  constructor(private loggerService:Premier) { }
 selectedpersonne!: personne;
   personnes: personne[] = [];
   ngOnInit() {
@@ -22,9 +23,9 @@ selectedpersonne!: personne;
       new personne(4, 'doe', 'alice', 26, '', 44332211, 'UX Designer'),   
        
     ];
+    this.loggerService.logger(this.personnes);
   }
 selectedPersonne(Personne: personne) {
     this.selectedpersonne = Personne;
   
-}
-}
+}}
