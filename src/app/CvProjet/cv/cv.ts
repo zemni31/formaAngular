@@ -12,7 +12,7 @@ import { Premier } from '../../premier';
   styleUrl: './cv.css'
 })
 export class Cv implements OnInit {
-  constructor(private loggerService:Premier) { }
+  constructor(private premierService:Premier) { }
 selectedpersonne!: personne;
   personnes: personne[] = [];
   ngOnInit() {
@@ -23,7 +23,9 @@ selectedpersonne!: personne;
       new personne(4, 'doe', 'alice', 26, '', 44332211, 'UX Designer'),   
        
     ];
-    this.loggerService.logger(this.personnes);
+    this.premierService.addData('data from CV component');
+    this.premierService.logger(this.personnes);
+
   }
 selectedPersonne(Personne: personne) {
     this.selectedpersonne = Personne;
