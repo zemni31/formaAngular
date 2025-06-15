@@ -4,6 +4,7 @@ import{ Rainbow } from '../rainbow';
 import { NgIf } from '@angular/common';
 import { NgFor} from '@angular/common';
 import { Premier } from '../../premier';
+import { Route, Router } from '@angular/router';
 @Component({
   selector: 'app-test',
   standalone: true,
@@ -15,8 +16,11 @@ import { Premier } from '../../premier';
 export class Test {
 show: boolean = true;
 persons=['Rihab','Houssem','Sabrine','Yosra'];
-constructor(private premierService:Premier) {}
+constructor(private premierService:Premier,private router:Router) {}
 loggerMesData(){
   this.premierService.logger('data from Test component');
+}
+goToCv(){
+this.router.navigate(['/cv']);
 }
 }
