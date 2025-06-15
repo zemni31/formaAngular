@@ -4,6 +4,6 @@ import { Test } from './directive/test/test';
 export const routes: Routes = [
     {path: 'cv', redirectTo: '/', pathMatch: 'full'},
     {path:'',component:Cv},
-    {path:'test',component:Test},
+    {path:'test/:bg',component:Test},
 ];
 

@@ -2,23 +2,30 @@
 <p>test Directive works!</p>
 </div>
 <div >
-<input *ngIf="show"
-type="text" 
-class="form-control" 
-appRainbow >
+<input
+  *ngIf="show"
+  type="text"
+  class="form-control"
+  appRainbow
+  [(ngModel)]="bg"
+  (ngModelChange)="changeColor($event)"
+>
+
 <br>
 <button class="btn btn-primary" (click)="show = !show">
     show rainbow input
 </button>
+<br><br>
+<div class="rectangle" 
+     [ngStyle]="{'background-color': bg }">
 
+</div><br>
 </div>
-<br>
 <ol class="list-group">
     <li *ngFor="let person of persons,let ind=index" class="list-group-item">
    {{person}}      -{{ind}}-
 </ol>
 <button class="btn btn-primary" (click)="loggerMesData()">
     show data </button>
-    <br><br>
-
+    <br>
     <a href="" (click)="goToCv()" > Go to Cv </a>
