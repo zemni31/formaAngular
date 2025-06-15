@@ -1,0 +1,5 @@
+div {
+border: blue solid 1px;
+border-radius: 25px;
+ display: inline-block;
+}
