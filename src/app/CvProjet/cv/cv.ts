@@ -5,10 +5,11 @@ import { personne } from "../../Model/personne";
 import { NgIf } from '@angular/common';
 import { CvService } from '../cv-service';
 import { Embauche } from "../embauche/embauche";
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-cv',
   standalone: true, 
-  imports: [ListeCv, DetailCv, NgIf, Embauche],
+  imports: [ListeCv, DetailCv, NgIf, Embauche,RouterModule],
   templateUrl: './cv.html',
   styleUrl: './cv.css'
 })
