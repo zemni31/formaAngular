@@ -3,6 +3,7 @@ import { personne } from "../../Model/personne";
 import { CommonModule } from '@angular/common';
 import { DefaultImagePipe } from '../default-image-pipe';
 import { EmbaucheService } from '../embauche-service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-detail-cv',
   standalone: true,
@@ -13,11 +14,14 @@ import { EmbaucheService } from '../embauche-service';
 export class DetailCv {
 @Input() personne!:personne;
 
-constructor(private embaucheService: EmbaucheService) {}
+constructor(private embaucheService: EmbaucheService,private route:Router) {}
 embaucher() {
     this.embaucheService.embaucher(this.personne);
   }
-
+MoreInfos(){
+  const link=['cv',this.personne.id];
+this.route.navigate(link);
+}
 
 
 }

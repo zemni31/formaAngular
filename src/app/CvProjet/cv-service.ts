@@ -19,4 +19,7 @@ private  personnes: personne[] = [];
   getPersonnes(): personne[] {
     return this.personnes;
   }
+  getPersonneById(id: number): personne | undefined {
+    return this.personnes.find(personne => personne.id == id);
+  }
 }
