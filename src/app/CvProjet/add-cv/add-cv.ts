@@ -8,6 +8,6 @@ import { FormsModule, NgForm } from '@angular/forms';
 })
 export class AddCv {
 addPersonne(formulaire: NgForm){
-  console.log(formulaire.value);
+  console.log(formulaire);
 }
 }

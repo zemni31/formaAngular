@@ -7,13 +7,14 @@ import { AddCv } from './CvProjet/add-cv/add-cv';
 import { ErrorC } from './error/error';
 export const routes: Routes = [
  {path:'cv',children:[
-    
+    {path:'',component:Cv},
     {path:'delete/:id',component:DeleteCv},
     {path:'add',component:AddCv},
     {path:':id',component:Detail},
-  
+   
  ]},
-  { path:'**',component:ErrorC},
-    {path:'test/:bg',component:Test},
+  {path:'test/:bg',component:Test},
+ { path:'**',component:ErrorC},
+   
 ];
 
