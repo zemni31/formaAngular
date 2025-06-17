@@ -1,23 +1,23 @@
 <form #formulaire="ngForm">
 <label for="name"> Name</label>
-<input type="text" id="name" name="name" ngModel class="form-control">
+<input required pattern="[A-Za-z]+" type="text" id="name" name="name" ngModel class="form-control">
 
 
 <label for="firstName"> FirstName</label>
-<input type="text" id="firstName" name="firstName" ngModel class="form-control">
+<input required  pattern="[A-Za-z]+" type="text" id="firstName" name="firstName" ngModel class="form-control">
 
 <label for="age"> Age</label>
-<input type="number" id="age" name="age" ngModel class="form-control">
+<input required  pattern="\d{1,3}" type="number" id="age" name="age" ngModel class="form-control">
 
 <label for="job"> Job</label>
-<input type="text" id="job" name="job" ngModel class="form-control">
+<input required pattern="[A-Za-z]+" type="text" id="job" name="job" ngModel class="form-control">
 
 
 <label for="cin"> CIN </label>
-<input type="number" id="cin" name="cin" ngModel class="form-control">
+<input required pattern="[0-9]{8}" type="number" id="cin" name="cin" ngModel class="form-control">
 
 <label for="path"> Path</label>
-<input type="text" id="path" name="path" ngModel class="form-control">
+<input  required type="text" id="path" name="path" ngModel class="form-control">
  <br>
 <button class="btn btn-primary" (click)="addPersonne(formulaire)">Envoyer</button>
 </form>
