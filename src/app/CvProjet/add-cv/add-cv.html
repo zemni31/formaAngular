@@ -17,7 +17,7 @@
 <input required pattern="[0-9]{8}" type="number" id="cin" name="cin" ngModel class="form-control">
 
 <label for="path"> Path</label>
-<input  required type="text" id="path" name="path" ngModel class="form-control">
+<input  type="text" id="path" name="path" ngModel class="form-control">
  <br>
-<button class="btn btn-primary" (click)="addPersonne(formulaire)">Envoyer</button>
+<button class="btn btn-primary" (click)="addPersonne(formulaire)"   [disabled]="formulaire.invalid">Envoyer</button>
 </form>
