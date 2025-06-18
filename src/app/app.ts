@@ -5,12 +5,13 @@ import { Cv } from "./CvProjet/cv/cv";
 import { Test } from "./directive/test/test";
 import { Header } from "./header/header";
 import { RouterSimulator } from "./router-simulator/router-simulator";
+import { ObservableComponent } from "./observable/observable";
 
 
 @Component({
   selector: 'app-root',
    standalone: true,
-  imports: [Cv, Test, RouterOutlet, Header, RouterSimulator],
+  imports: [Cv, Test, RouterOutlet, Header, RouterSimulator, ObservableComponent],
   templateUrl: './app.html',
  // styleUrls: ['./app.component.css']
 })
